@@ -8,17 +8,20 @@ describe('centsToDecimals function', () => {
 
   // Use this test suite as a starting point/reference.
 
-  it('should return undefined when parameter passed is a string', () => {
-    expect(centsToDecimals('abcdef')).toEqual(undefined);
+  it('should returns undefined when parameter passed is a string.', () => {
+    expect(centsToDecimals('abcdef').toEqual(undefined);
   });
 
   // Fix the below test suites:
 
   it('should returns undefined when parameter passed is a string containing number characters.', () => {
-    expect(centsToDecimals('12345')).toEqual(undefined);
+    expect(centsToDecimals('12345').toEqual(undefined);
   });
 
-  it('should returns undefined when NaN value is passed as a parameter', () => {
+  it('should returns undefined when NaN value is passed as a parameter.', () => {
+    // console.log(centsToDecimals(NaN) === undefined);
+
+    // ... complete the test assertion below
     expect(centsToDecimals(NaN)).toEqual(undefined);
   });
 
@@ -40,7 +43,7 @@ describe('centsToDecimals function', () => {
     // console.log(centsToDecimals(1000).slice(0, 5) === '10.00');
 
     // ... complete the test assertion below
-    expect(centsToDecimals(1000)).toEqual(10.0);
+  expect(centsToDecimals(1000)).toEqual(10.00);
 
     // console.log(centsToDecimals(50273).slice(0, 6) === '502.73');
     expect(centsToDecimals(50273)).toEqual(502.73);
@@ -48,18 +51,18 @@ describe('centsToDecimals function', () => {
     // console.log(centsToDecimals(0).slice(0, 4) === '0.00');
 
     // ... complete the test assertion below
-    expect(centsToDecimals(0)).toEqual(0.0);
+    expect(centsToDecimals(0)).toEqual(0.00);
   });
 
   it('Should return a string representation of a number with `$` sign appended at the end.', () => {
     // console.log(centsToDecimals(1000) === '10.00$');
 
     // ... complete the test assertion below
-    expect(centsToDecimals(1000)).toEqual('10.00$');
+    expect(centsToDecimals('1000')).toEqual('10.00$');
 
     // console.log(centsToDecimals(0) === '0.00$');
 
     // ... complete the test assertion below
-    expect(centsToDecimals(0)).toEqual('0.00$');
+    expect(centsToDecimals('0')).toEqual('0.00$');
   });
 });
